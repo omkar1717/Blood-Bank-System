@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blood Bank Management System</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Full-page background */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: red; /* Red background below the image */
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Navigation Menu */
+        nav {
+            position: relative;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu li {
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background: red;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            background: darkred;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('sbg.jpg') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+        }
+
+        /* Sections with white background */
+        .section {
+            padding: 50px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            color: #d50000;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Blood Bank</div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#admin">Admin</a></li>
+            <li><a href="#donor">Donor</a></li>
+            <li><a href="#recipient">Recipient</a></li>
+            <li><a href="#availability">Availability</a></li>
+            <li><a href="#report">Report</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home"></section>
+
+<!-- Admin Section -->
+<section class="section" id="admin">
+    <h2>Admin Login</h2>
+    <p><a href="admin.html">Click here</a> to login as Admin.</p>
+</section>
+
+<!-- Donor Section -->
+<section class="section" id="donor">
+    <h2>Donor Registration</h2>
+    <p><a href="donor.html">Register as a Donor</a> to help save lives.</p>
+</section>
+
+<!-- Recipient Section -->
+<section class="section" id="recipient">
+    <h2>Recipient Registration</h2>
+    <p><a href="recipient.html">Request Blood</a> as a Recipient.</p>
+</section>
+
+<!-- Availability Section -->
+<section class="section" id="availability">
+    <h2>Check Blood Availability</h2>
+    <p><a href="stock.php">View Available Blood Groups</a>.</p>
+</section>
+
+<!-- Report Section -->
+<section class="section" id="report">
+    <h2>Blood Bank Report</h2>
+    <p><a href="report.php">View Reports</a> (Admin Only).</p>
+</section>
+
+</body>
+</html>

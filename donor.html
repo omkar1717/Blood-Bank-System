@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donor Registration</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-page background */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('sdonor.jpg') no-repeat center center/cover;
+        }
+
+        /* Registration container */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 500px;
+        }
+
+        /* Title */
+        h2 {
+            color: #d50000;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* Input fields and select */
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        /* Buttons */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.3s;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Register button */
+        .register-btn {
+            background: #d50000;
+        }
+
+        .register-btn:hover {
+            background: darkred;
+        }
+
+        /* Home button */
+        .home-btn {
+            background: #444;
+        }
+
+        .home-btn:hover {
+            background: black;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="donor.php" method="POST">
+        <div class="container">
+            <h2>Donor Registration</h2>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="blood-group">Blood Group:</label>
+            <select id="blood-group" name="blood-group" required>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label for="contact">Contact Number:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <button type="submit" class="btn register-btn">Register</button>
+            <a href="index.html" class="btn home-btn">🏠 Home</a>
+        </div>
+    </form>
+
+</body>
+</html>

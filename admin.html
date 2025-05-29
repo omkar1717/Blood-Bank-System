@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-page background */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('sadmin.jpg') no-repeat center center/cover;
+        }
+
+        /* Login container */
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 450px;
+        }
+
+        /* Title */
+        h2 {
+            color: #d50000;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        /* Input fields */
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        /* Buttons */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.3s;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Login button */
+        .login-btn {
+            background: #d50000;
+        }
+
+        .login-btn:hover {
+            background: darkred;
+        }
+
+        /* Home button */
+        .home-btn {
+            background: #444;
+        }
+
+        .home-btn:hover {
+            background: black;
+        }
+
+        /* Error Message */
+        .message {
+            margin-top: 15px;
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+
+    <script>
+        function validateLogin() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+
+            // Fixed admin credentials
+            var adminName = "chaitu";
+            var adminPassword = "1234";
+
+            if (name === adminName && password === adminPassword) {
+                alert("Login successful!");
+                window.location.href = "index.html"; // Redirect to dashboard
+            } else {
+                errorMessage.textContent = "Invalid name or password!";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <button class="btn login-btn" onclick="validateLogin()">Login</button>
+        <a href="index.html" class="btn home-btn">🏠 Home</a>
+        
+        <div id="error-message" class="message"></div>
+    </div>
+
+</body>
+</html>
